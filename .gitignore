@@ -6,6 +6,7 @@ venv/
 
 # model checkpoint
 model_checkpoint/sam
+yolov8n.pt
 
 #images
 image-matching*
