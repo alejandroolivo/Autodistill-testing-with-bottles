@@ -1,0 +1,6 @@
+names:
+- bottle
+- cap
+nc: 2
+train: H:\0. Trabajo\IDi\5. INVENTOS\Autodistill-testing-with-bottles\Data\dataset/train/images
+val: H:\0. Trabajo\IDi\5. INVENTOS\Autodistill-testing-with-bottles\Data\dataset/valid/images
