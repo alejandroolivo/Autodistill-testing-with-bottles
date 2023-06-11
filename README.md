@@ -1,6 +1,9 @@
 # Autodistill-testing-with-bottles
 Este proyecto tiene como objetivo probar una nueva herramienta llamada Autodistill. Autodistill es una herramienta que permite autoanotar imágenes y entrenarlas utilizando un modelo base potente y un modelo objetivo rápido y óptimo.
 
+
+![Ejemplo: Bandejas de Carne](Screenshots/image_ontology.png)
+
 ## Descripción
 El proyecto consta de dos scripts principales:
 
