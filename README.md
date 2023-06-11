@@ -1,4 +1,4 @@
-# Autodistill-testing-with-bottles
+# Autodistill-testing
 Este proyecto tiene como objetivo probar una nueva herramienta llamada Autodistill. Autodistill es una herramienta que permite autoanotar imágenes y entrenarlas utilizando un modelo base potente y un modelo objetivo rápido y óptimo.
 
 
