@@ -4,7 +4,7 @@ Este proyecto tiene como objetivo probar una nueva herramienta llamada Autodisti
 
 ![Ejemplo: Bandejas de Carne](Screenshots/image_ontology.png)
 
-## Descripción
+# Descripción
 El proyecto consta de dos scripts principales:
 
 - SAMLabels2Yolov8TargetModel.py: Este script se encarga de la preparación de los datos, la creación de la ontología y la generación del conjunto de datos a través del modelo base.
@@ -13,10 +13,10 @@ El proyecto consta de dos scripts principales:
 
 - Yolov8Inference.py: Este script se encarga de realizar inferencias utilizando el modelo YOLOv8 entrenado.
 
-## Instalación
+# Instalación
 Para instalar y configurar este proyecto, necesitarás clonar el repositorio y asegurarte de tener todas las dependencias necesarias instaladas.
 
-## Requisitos
+# Requisitos
 Este proyecto requiere Python 3.7 o superior. Además, se requieren las siguientes bibliotecas, que se pueden instalar con pip utilizando el archivo requirements.txt incluido:
 
 autodistill==0.1.2
@@ -35,7 +35,7 @@ Para instalar las dependencias, ejecuta el siguiente comando:
 pip install -r requirements.txt
 ```
 
-## Uso
+# Uso
 Para usar este proyecto, simplemente ejecuta los scripts en el orden indicado anteriormente. Asegúrate de tener tus imágenes en la carpeta correcta y de ajustar cualquier parámetro según sea necesario.
 
 # License
