@@ -8,6 +8,12 @@ venv/
 model_checkpoint/sam
 yolov8n.pt
 
+Data/Bandeja
+Data/Chicken
+Data/Burbujas
+Screenshots/Private
+runs/detect
+
 #images
 image-matching*
 

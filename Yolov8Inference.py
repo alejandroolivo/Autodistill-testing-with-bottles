@@ -11,16 +11,16 @@ def main():
 
     # Get the path of the data
     DATA = os.path.join(HOME, 'Data')
-    IMAGES = os.path.join(DATA, 'Bottles', 'Images')
+    IMAGES = os.path.join(DATA, 'Carne', 'Images')
 
     # image_path
-    image_path = os.path.join(IMAGES, 'Bottle (1).png')
+    image_path = os.path.join(IMAGES, 'Carne (1).png')
 
     # select device
     device = 'cuda' if torch.cuda.is_available() else 'cpu'
 
     # set threshold
-    threshold = 0.1
+    threshold = 0.8
 
     # load a pretrained model (recommended for best training results)
     model = YOLO('yolov8n.pt')
@@ -34,15 +34,20 @@ def main():
 
     # loop through results
     for result in results[0].cpu().numpy():
-        x1, y1, x2, y2 = map(int, result.boxes[0].xyxy[0])
 
-        # if score is greater than threshold
-        if True:
+        for box in result.boxes:
+            x1, y1, x2, y2 = map(int, box.xyxy[0])
 
-            # draw bounding box
-            color = (255, 0, 0)
-            cv2.rectangle(image, (int(x1), int(y1)), (int(x2), int(y2)), color, 2)
+            # if score is greater than threshold
+            if True:
+
+                # draw bounding box
+                color = (0, 255, 0)
+                cv2.rectangle(image, (int(x1), int(y1)), (int(x2), int(y2)), color, 2)
     
+    # resize image with rectangle to half size
+    image = cv2.resize(image, (int(image.shape[1]/2), int(image.shape[0]/2)))
+
     # plot image
     cv2.imshow('image',image)
     cv2.waitKey(0)

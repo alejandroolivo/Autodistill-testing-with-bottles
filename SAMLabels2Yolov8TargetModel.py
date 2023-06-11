@@ -3,25 +3,28 @@ import supervision as sv
 import cv2
 import shutil
 
+# Folder
+product_folder = 'Carne'
+
 # Get current working directory
 HOME = os.getcwd()
 
 # Get the path of the data
 DATA = os.path.join(HOME, 'Data')
-IMAGES = os.path.join(DATA, 'Bottles', 'Images')
+IMAGES = os.path.join(DATA, product_folder, 'Images')
 
 # Check if the path exists and image count
 image_paths = sv.list_files_with_extensions(
     directory=IMAGES, 
-    extensions=["png", "jpg", "jpg"])
+    extensions=["png", "jpg", "bmp"])
 
 print('image count:', len(image_paths))
 
 
 # Plot set of images
-SAMPLE_SIZE = 16
-SAMPLE_GRID_SIZE = (4, 4)
-SAMPLE_PLOT_SIZE = (16, 16)
+SAMPLE_SIZE = 6
+SAMPLE_GRID_SIZE = (2, 3)
+SAMPLE_PLOT_SIZE = (4, 6)
 
 titles = [
     image_path.stem
@@ -42,8 +45,9 @@ sv.plot_images_grid(images=images, titles=titles, grid_size=SAMPLE_GRID_SIZE, si
 from autodistill.detection import CaptionOntology
 
 ontology=CaptionOntology({
-    "bottle": "bottle",
-    "cap": "cap"
+    "informative label": "etiqueta",
+    "plastic tray": "bandeja",
+    "raw meat steaks": "carne"
 })
 
 # Base Model - A Base Model is a large foundation model that knows a lot about a lot. Base models are often multimodal and can perform many tasks. 
@@ -105,23 +109,3 @@ sv.plot_images_grid(
     grid_size=SAMPLE_GRID_SIZE, 
     size=SAMPLE_PLOT_SIZE)
 
-
-# Target Model - a Target Model is a supervised model that consumes a Dataset and outputs a distilled model that is ready for deployment. 
-# Target Models are usually small, fast, and fine-tuned to perform a specific task very well (but they don't generalize well beyond the information described in their Dataset). 
-# Examples of Target Models are YOLOv8 and DETR.
-
-from autodistill_yolov8 import YOLOv8
-
-target_model = YOLOv8("yolov8n.pt")
-target_model.train(DATA_YAML_PATH, epochs=50)
-
-
-# Target Model Evaluation
-
-from IPython.display import Image
-
-Image(filename=f'{HOME}/runs/detect/train/confusion_matrix.png', width=600)
-
-Image(filename=f'{HOME}/runs/detect/train/results.png', width=600)
-
-Image(filename=f'{HOME}/runs/detect/train/val_batch0_pred.jpg', width=600)
