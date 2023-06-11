@@ -33,8 +33,4 @@ pip install -r requirements.txt
 ```
 
 ## Uso
-<<<<<<< HEAD
 Para usar este proyecto, simplemente ejecuta los scripts en el orden indicado anteriormente. Asegúrate de tener tus imágenes en la carpeta correcta y de ajustar cualquier parámetro según sea necesario.
-=======
-Para usar este proyecto, simplemente ejecuta los scripts en el orden indicado anteriormente. Asegúrate de tener tus imágenes en la carpeta correcta y de ajustar cualquier parámetro según sea necesario.
->>>>>>> 3af04846280b539ffeccb10b38376a3c0ca42365
