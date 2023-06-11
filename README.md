@@ -37,3 +37,8 @@ pip install -r requirements.txt
 
 ## Uso
 Para usar este proyecto, simplemente ejecuta los scripts en el orden indicado anteriormente. Asegúrate de tener tus imágenes en la carpeta correcta y de ajustar cualquier parámetro según sea necesario.
+
+# License
+
+This project is licensed under the Apache License 2.0. For more information, please refer to the [LICENSE](LICENSE) file in the root of this repository.
+Apache License 2.0
