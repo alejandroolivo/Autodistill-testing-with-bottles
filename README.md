@@ -4,7 +4,9 @@ Este proyecto tiene como objetivo probar una nueva herramienta llamada Autodisti
 ## Descripción
 El proyecto consta de dos scripts principales:
 
-- SAMLabels2Yolov8TargetModel.py: Este script se encarga de la preparación de los datos, la creación de la ontología, la generación del conjunto de datos a través del modelo base, el entrenamiento del modelo objetivo y la evaluación del modelo.
+- SAMLabels2Yolov8TargetModel.py: Este script se encarga de la preparación de los datos, la creación de la ontología y la generación del conjunto de datos a través del modelo base.
+
+- Yolov8Training.py: Este script se encarga de realizar el entrenamiento del modelo objetivo y la evaluación del modelo.
 
 - Yolov8Inference.py: Este script se encarga de realizar inferencias utilizando el modelo YOLOv8 entrenado.
 
